@@ -33,7 +33,7 @@ export function Header() {
       }
     }
 
-    if (pathname === "/") {
+    if (pathname === "/dashboard") {
       window.addEventListener("scroll", handleScroll)
       handleScroll() // Check initial position
       return () => window.removeEventListener("scroll", handleScroll)
@@ -41,7 +41,7 @@ export function Header() {
   }, [pathname])
 
   const handleNavigation = (targetId: string) => {
-    if (pathname === "/") {
+    if (pathname === "/dashboard") {
       const element = document.getElementById(targetId)
       if (element) {
         const headerHeight = 80 // Altura del header + algo de padding
@@ -52,7 +52,7 @@ export function Header() {
         })
       }
     } else {
-      router.push(`/#${targetId}`)
+      router.push(`/dashboard#${targetId}`)
     }
   }
 
