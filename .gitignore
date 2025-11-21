@@ -1,27 +1,92 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# dependencies
+# ===== NEXT.JS / NODE =====
 /node_modules
-
-# next.js
 /.next/
 /out/
-
-# production
 /build
-
-# debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
 
-# env files
+# ===== PYTHON / DJANGO =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+/media/
+/mvp/.venv/
+/mvp/media/
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# ===== TESTING & COVERAGE =====
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# ===== IDE & EDITOR =====
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+
+# ===== ENV FILES =====
 .env*
+!.env.example
 
-# vercel
-.vercel
-
-# typescript
+# ===== TYPESCRIPT / VERCEL =====
 *.tsbuildinfo
 next-env.d.ts
+.vercel
+
+# ===== LOCAL TEST FILES =====
+test_*.py
+check_*.py
+debug_*.py
+*_test.py
+verify_*.py
+add_*.py
+populate_*.py
+final_*.py
+
+# ===== DOCUMENTATION (LOCAL) =====
+AUDIO_SYSTEM_CHECKLIST.md
+AUDIO_SYSTEM_GUIDE.md
+AUDIO_SYSTEM_IMPLEMENTATION.md
+AUTHENTICATION_GUIDE.md
+IMPLEMENTATION_SUMMARY.md
+QUICK_TEST_GUIDE.md
+SETUP_COMPLETE.md
+USER_SYSTEM_README.md
